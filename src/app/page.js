@@ -98,7 +98,7 @@ const Service = ({ service }) => (
 const Testimonial = ({ testimonial }) => (
   <div className="p-6 bg-gray-50 shadow-lg rounded-lg text-center">
     <img src={testimonial.image} alt={testimonial.name} className="mx-auto  mb-4 rounded-full" />
-    <p className="italic">"{testimonial.quote}"</p>
+    <p className="italic">{testimonial.quote}</p>
     <h3 className="mt-4 text-blue-500 font-semibold">{testimonial.name}</h3>
     <p className="text-blue-400">{testimonial.position}</p>
   </div>
