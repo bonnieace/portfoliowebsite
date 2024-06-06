@@ -118,7 +118,7 @@ export default function Home() {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="">
       <Navigation setShowMenu={setShowMenu} showMenu={showMenu} />
       {showMenu && <MobileMenu />}
       <HeroSection />
