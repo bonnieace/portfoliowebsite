@@ -148,7 +148,7 @@ export default function Projects() {
     <section id="projects" className="py-20 px-4 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl font-bold text-center mb-12 text-blue-500">Our Projects</h2>
-        <div className="project-list grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="project-list grid grid-cols-1 md:grid-cols-3 gap-8 text-black  ">
           {projects.map((project, index) => (
             <Project key={index} project={project} />
           ))}
