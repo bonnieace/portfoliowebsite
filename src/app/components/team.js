@@ -26,7 +26,7 @@ const teamMembers = [
 
 const TeamPage = () => {
   return (
-    <section id="team" className="py-20 px-4 bg-gray-50">
+    <section id="team" className="">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl font-bold text-center mb-12 text-blue-500">Our Team</h2>
         {/* Team Member Grid */}
