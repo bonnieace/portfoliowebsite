@@ -157,15 +157,10 @@ const HeroSection = () => (
       <p className="text-lg mb-10 text-center md:text-left leading-relaxed">
         Discover a world of innovative solutions designed to streamline and enhance your business operations. At Kioo Technologies, we’re dedicated to developing customized software that empowers you to achieve your goals with ease and efficiency.
       </p>
-      <ScrollLink
-          to="services"
-          smooth={true}
-          duration={500}
-          className="relative inline-block text-white text-decoration-none font-semibold text-transform-uppercase"
-        >
+      
       
       <button >
-      <a href=""><span>EXPLORE</span></a> 
+      <a href="#services"><span>EXPLORE</span></a> 
       <style jsx>{`
 a {
   position: relative;
@@ -225,7 +220,6 @@ button {
       
        `} </style>
       </button>
-      </ScrollLink>
 
     </div>
 
@@ -238,6 +232,7 @@ button {
 
 );
 
+
 const ServicesSection = () => (
   <section id="services" className="py-20 px-4 bg-gray-50">
     <div className="max-w-7xl mx-auto">
@@ -246,7 +241,7 @@ const ServicesSection = () => (
         {services.map((service, index) => (
           <div
             key={index}
-            className="flex flex-col items-start justify-center w-100 h-80 bg-white shadow-[0px_0px_15px_rgba(0,0,0,0.09)] p-9 space-y-3 relative overflow-hidden mx-auto" // Increased height here
+            className="flex flex-col items-start justify-center w-full h-80 bg-white shadow-[0px_0px_15px_rgba(0,0,0,0.09)] p-9 space-y-3 relative overflow-hidden mx-auto"
           >
             {/* Number at the top left */}
             <div className="w-12 h-12 text-blue-500 absolute top-4 left-4">
@@ -265,6 +260,7 @@ const ServicesSection = () => (
       </div>
     </div>
   </section>
+
 );
 
 

@@ -6,7 +6,7 @@ import 'slick-carousel/slick/slick-theme.css';
 // Sample data for projects
 const projects = [
   {
-    title: "Point of Sale System",
+    title: "POS System",
     description: "This is a cloud-based point of sale system that is available on mobile, computers, tablets, and POS devices. (Offline mode available).",
     images: [
       "/iPhone1.png",
@@ -24,7 +24,36 @@ const projects = [
     type: "mobile-app"
   },
   {
-    title: " E-commerce Platform",
+    title: "Jenga app",
+    description: "This is a cloud-based construction system that allows owners and foremen to track expenses,manage human resource and checkin features.",
+    images: [
+      "/iPhone 15 Mockup, Perspective (1).png",
+      "/jenga.png",
+    ],
+    type: "mobile-app"
+  },
+  {
+    title: "Portugalgo",
+    description: "This is an owners portal app that allows home owners to list their homes on portugalgo for listing and manage reservations",
+    images: [
+      "/portugal.png",
+
+      "/iPhone 15 Mockup, Perspective (2).png",
+    ],
+    type: "mobile-app"
+  },
+  {
+    title: "Portugalgo",
+    description: "This is an owners portal app that allows home owners to list their homes on portugalgo for listing and manage reservations",
+    images: [
+      "/portugal.png",
+
+      "/iPhone 15 Mockup, Perspective (2).png",
+    ],
+    type: "mobile-app"
+  },
+  {
+    title: " E-commerce",
     description: "An online store for various products with a user-friendly interface and secure payment options.",
     images: [
       "/Iphone 15 Screens Mockup (2).png",
@@ -33,7 +62,7 @@ const projects = [
     type: "mobile-app"
   },
   {
-    title: "Swahilipro Compiler",
+    title: "Swahilipro",
     description: "This is a Swahili compiler and programming language that allows Swahili speakers to write and execute code in their native language.",
     images: [
       "/Macbook Mockup Front View UV (3).png",
@@ -70,7 +99,7 @@ const projects = [
     link:'https://tshiroh.s3.eu-north-1.amazonaws.com/Cake-Website/index.html',
   },
   {
-    title: "MEXC Futures trading",
+    title: "MEXC Futures bot",
     description: "A cryptocurrency webapp project that uses the mexc API to trade futures using the martingale trading strategy.",
     images: [
       "/iPad Pro Mockup UV (1).png",
@@ -111,7 +140,7 @@ const Project = ({ project }) => {
   const [isExpanded, setIsExpanded] = useState(true);
   
   return (
-    <div id='project' className={`project ${isExpanded ? 'expanded' : ''}`}>
+    <div id='project' className={`project ${isExpanded ? 'expanded' : ''} overflow-x-hidden`}>
       <div className="image">
         {isExpanded ? (
           <Slider dots={true} infinite={project.images.length > 1} speed={500} slidesToShow={1} slidesToScroll={1}>

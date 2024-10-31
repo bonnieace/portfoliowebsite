@@ -1,5 +1,5 @@
 nav{
-    background: rgba(0,0,0, 0.3);
+    background: transparent;
     width: max-content;
     display: block;
     padding: 0.7rem 1.7rem;
@@ -12,9 +12,11 @@ nav{
     gap: 0.8rem;
     border-radius: 3rem;
     backdrop-filter: blur(15px);
+    border: solid;
+    border-color: white;
 }
 nav a{
-    background: transparent;
+    background: lightblue;
     padding: 0.9rem;
     border-radius: 50%;
     display: flex;
