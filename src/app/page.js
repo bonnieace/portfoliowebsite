@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLaptopCode, faCloud, faMobileAlt, faFilm, faChain, faVideo, faRobot } from '@fortawesome/free-solid-svg-icons';
 import { Link as ScrollLink, Element, animateScroll as scroll, scroller } from 'react-scroll';
-import Typed from 'react-typed';
 import Projects from "./components/projects";
 import TeamPage from "./components/team";
 import Navs from "./components/nav";
@@ -21,7 +20,7 @@ const services = [
     icon: faLaptopCode
   },
   {
-    title: "Cloud Services",
+    title: "  Cloud computing Services",
     description: "We leverage the power of cloud computing to enhance your operational efficiency.",
     icon: faCloud
   },
@@ -31,7 +30,7 @@ const services = [
     icon: faMobileAlt
   },
   {
-    title: "Animation",
+    title: "3D  &  2D Animation services",
     description: "We offer Animation services including product design, explainer videos, cartoons, and animations as well as music videos.",
     icon: faFilm
   },
@@ -41,7 +40,7 @@ const services = [
     icon: faChain // Assuming faLink represents blockchain; replace with the appropriate icon if needed
   },
   {
-    title: "Artificial Intelligence",
+    title: "Artificial Intelligence and machine learning",
     description: "We develop AI-powered solutions to automate processes, gain insights, and improve decision-making.",
     icon: faRobot // Assuming faRobot represents AI; replace with the appropriate icon if needed
   }
@@ -131,43 +130,144 @@ export default function Home() {
 }
 
 const HeroSection = () => (
+
   <Element name="hero">
-    <section className="relative flex items-center justify-center text-center  bg-blue-500 text-white py-20 px-4">
-      <div className="absolute left-0 top-1/2 transform -translate-y-1/2 space-y-6 ml-4 hidden md:block">
-        <a href="https://www.linkedin.com/in/bonnie-masota-310267248/" target="_blank" rel="noopener noreferrer">
-          <BsLinkedin className="text-white text-2xl hover:text-gray-200 transition" />
-        </a>
-        <a href="https://github.com/bonnieace" target="_blank" rel="noopener noreferrer">
-          <BsGithub className="text-white text-2xl hover:text-gray-200 transition" />
-        </a>
-        <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer">
-          <BsDribbble className="text-white text-2xl hover:text-gray-200 transition" />
-        </a>
-      </div>
-      <div className="flex flex-col items-center justify-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Kioo Technologies</h1>
-        <p className="text-lg mb-8">Innovative software solutions to drive your business forward.</p>
-        <ScrollLink to="services" smooth={true} duration={500} className="bg-white text-blue-500 py-2 px-6 rounded-full font-semibold hover:bg-gray-200 transition">
-          Explore Services
-        </ScrollLink>
-      </div>
-      <a href="#contact" className="absolute right-0 top-1/2 transform -translate-y-1/2 -rotate-90 text-lg font-semibold text-white hover:text-gray-200 transition hidden md:block">
-        scroll down
+  <section className="relative flex flex-col md:flex-row items-center justify-center text-center bg-blue-500 text-white min-h-screen py-20 px-4">
+    {/* Social Links */}
+    <div className="absolute left-0 top-1/2 transform -translate-y-1/2 space-y-4 ml-4 hidden md:flex flex-col">
+      <a href="https://www.linkedin.com/in/bonnie-masota-310267248/" target="_blank" rel="noopener noreferrer">
+        <BsLinkedin className="text-white text-3xl hover:text-gray-200 transition duration-300" />
       </a>
-    </section>
-  </Element>
+      <a href="https://github.com/bonnieace" target="_blank" rel="noopener noreferrer" className="mt-4">
+        <BsGithub className="text-white text-3xl hover:text-gray-200 transition duration-300" />
+      </a>
+      <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer" className="mt-4">
+        <BsDribbble className="text-white text-3xl hover:text-gray-200 transition duration-300" />
+      </a>
+    </div>
+
+    {/* Image Section */}
+    <div className="w-full md:w-1/2 mb-8 md:mb-0">
+      <img src="a.png" alt="Innovative Software Solutions" className="w-full h-auto object-cover rounded-lg" />
+    </div>
+
+    {/* Text Content */}
+    <div className="flex flex-col items-center md:items-start md:w-1/2 px-6">
+      <h1 className="text-4xl font-extrabold mb-4 text-center md:text-left leading-tight">Welcome to Kioo Technologies</h1>
+      <p className="text-lg mb-10 text-center md:text-left leading-relaxed">
+        Discover a world of innovative solutions designed to streamline and enhance your business operations. At Kioo Technologies, we’re dedicated to developing customized software that empowers you to achieve your goals with ease and efficiency.
+      </p>
+      <ScrollLink
+          to="services"
+          smooth={true}
+          duration={500}
+          className="relative inline-block text-white text-decoration-none font-semibold text-transform-uppercase"
+        >
+      
+      <button >
+      <a href=""><span>EXPLORE</span></a> 
+      <style jsx>{`
+a {
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  border: 2px solid #fefefe;
+  color: #fefefe;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+a::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% - 12px);
+  background-color: #3B82F6;
+  transition: 0.3s ease-in-out;
+  transform: scaleY(1);
+}
+
+a:hover::before {
+  transform: scaleY(0);
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: -2px;
+  height: calc(100% + 4px);
+  width: calc(100% - 12px);
+  background-color: #3B82F6;
+  transition: 0.3s ease-in-out;
+  transform: scaleX(1);
+  transition-delay: 0.5s;
+}
+
+a:hover::after {
+  transform: scaleX(0);
+}
+
+a span {
+  position: relative;
+  z-index: 3;
+}
+
+button {
+  background-color: none;
+  text-decoration: none;
+  background-color: #3B82F6;
+  border: none;
+}
+      
+       `} </style>
+      </button>
+      </ScrollLink>
+
+    </div>
+
+    {/* Scroll Down Link */}
+    <a href="#contact" className="absolute right-0 top-1/2 transform -translate-y-1/2 -rotate-90 text-lg font-semibold text-white hover:text-gray-200 transition hidden md:block">
+      
+    </a>
+  </section>
+</Element>
+
 );
 
 const ServicesSection = () => (
   <section id="services" className="py-20 px-4 bg-gray-50">
     <div className="max-w-7xl mx-auto">
       <h2 className="text-3xl font-bold text-blue-500 text-center mb-12">Our Services</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {services.map((service, index) => <Service key={index} service={service} />)}
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-8 align-items-center">
+        {services.map((service, index) => (
+          <div
+            key={index}
+            className="flex flex-col items-start justify-center w-100 h-80 bg-white shadow-[0px_0px_15px_rgba(0,0,0,0.09)] p-9 space-y-3 relative overflow-hidden mx-auto" // Increased height here
+          >
+            {/* Number at the top left */}
+            <div className="w-12 h-12 text-blue-500 absolute top-4 left-4">
+              <p className="text-blue text-xl font-bold">{index + 1}.</p>
+            </div>
+
+            {/* Icon inside a circle at the bottom right */}
+            <div className="w-24 h-24 bg-blue-500 rounded-full absolute -right-5 -top-7 flex items-center justify-center">
+              <FontAwesomeIcon icon={service.icon} className="text-white text-2xl" />
+            </div>
+
+            <h1 className="font-bold text-xl text-center">{service.title}</h1>
+            <p className="text-md text-zinc-500 leading-6 text-center">{service.description}</p>
+          </div>
+        ))}
       </div>
     </div>
   </section>
 );
+
+
 
 const TestimonialsSection = () => (
   <section id="testimonials" className="py-20 px-4 bg-white">
