@@ -11,6 +11,7 @@ import './header.css'
 
 
 import { PrimeReactProvider, PrimeReactContext } from 'primereact/api';
+import TestimonialCard from "./components/testimonials";
         
 // Mock data
 const services = [
@@ -47,33 +48,6 @@ const services = [
 ];
 
 
-const testimonials = [
-  {
-    name: "Owner",
-    position: "Jamos Distributers, Ngara.",
-    quote: "Kioo Technologies transformed our business with their innovative solutions. We tasked them with building a cloud-based invoicing system and they delivered beyond expectation.",
-    image: "https://garethdavidstudio.com/images/ME_MOJI.png"
-  },
-  {
-    name: "Owner",
-    position: "Thamani Cereals, Ruiru.",
-    quote: "Their Point of Sales mobile application helped transform my business. Highly recommend!",
-    image: "https://borealos.com/dynamic/img/3-como-crear-memoji.jpg"
-  },
-  {
-    name: "Owner",
-    position: "Mugutha Hardware, Kiambu.",
-    quote: "We use Kioo Technologies for all our software needs. From business websites to their robust point of sale system, they offer the best solutions for their customers.",
-    image: "https://th.bing.com/th/id/R.37840ea9ad737e42567e5a3a34b76162?rik=CD82SRBrvmktpA&pid=ImgRaw&r=0"
-  },
-  {
-    name: "Owner",
-    position: "Tshiroh's Kitchen, Juja.",
-    quote: "Kioo Technologies created our bakery website and hosts our business on their ecommerce platform.",
-    image: "https://i.pinimg.com/originals/50/b2/6c/50b26ce6d2bc8adcf0e9a720c6fdc3f9.jpg"
-  }
-];
-
 
 
 
@@ -86,14 +60,7 @@ const Service = ({ service }) => (
   </div>
 );
 
-const Testimonial = ({ testimonial }) => (
-  <div className="p-6 bg-gray-50 shadow-lg text-black rounded-lg text-center">
-    <img src={testimonial.image} alt={testimonial.name} className="mx-auto  mb-4 rounded-full w-20 h-20" />
-    <p className="italic">{testimonial.quote}</p>
-    <h3 className="mt-4 text-blue-500 font-semibold">{testimonial.name}</h3>
-    <p className="text-blue-400">{testimonial.position}</p>
-  </div>
-);
+
 
 const Footer = () => (
   <footer id="contact" className="bg-gray-800 text-white py-10">
@@ -132,7 +99,7 @@ export default function Home() {
 const HeroSection = () => (
 
   <Element name="hero">
-  <section className="relative flex flex-col md:flex-row items-center justify-center text-center bg-blue-500 text-white min-h-screen py-20 px-4">
+  <section className="relative flex flex-col md:flex-row items-center justify-center text-center bg-blue-500 text-white min-h-screen py-8 px-4">
     {/* Social Links */}
     <div className="absolute left-0 top-1/2 transform -translate-y-1/2 space-y-4 ml-4 hidden md:flex flex-col">
       <a href="https://www.linkedin.com/in/bonnie-masota-310267248/" target="_blank" rel="noopener noreferrer">
@@ -234,7 +201,7 @@ button {
 
 
 const ServicesSection = () => (
-  <section id="services" className="py-20 px-4 bg-gray-50">
+  <section id="services" className="py-8 px-4 bg-gray-50">
     <div className="max-w-7xl mx-auto">
       <h2 className="text-3xl font-bold text-blue-500 text-center mb-12">Our Services</h2>
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8 align-items-center">
@@ -268,10 +235,8 @@ const ServicesSection = () => (
 const TestimonialsSection = () => (
   <section id="testimonials" className="py-20 px-4 bg-white">
     <div className="max-w-7xl mx-auto">
-      <h2 className="text-3xl font-bold text-blue-500 text-center mb-12">What Our Clients Say</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {testimonials.map((testimonial, index) => <Testimonial key={index} testimonial={testimonial} />)}
-      </div>
+      <h2 className="text-3xl font-bold text-blue-500 text-center ">What Our Clients Say</h2>
+     <TestimonialCard/>
     </div>
   </section>
 );
