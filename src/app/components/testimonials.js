@@ -53,11 +53,11 @@ const TestimonialCard = () => {
             {/* Right section with quote */}
             <div className="w-full sm:w-2/3 p-8 pl-0">
               <div className="relative">
-                <div className="text-4xl sm:text-6xl text-blue-400 absolute -top-6 left-0 italic font-serif">"</div>
+                <div className="text-4xl sm:text-6xl text-blue-400 absolute -top-6 left-0 italic font-serif">&ldquo;</div>
                 <p className="text-lg sm:text-xl italic text-white px-4 sm:px-12 mb-8">
                   {testimonials[currentSlide].quote}
                 </p>
-                <div className="text-4xl sm:text-6xl text-blue-400 absolute -bottom-8 right-0 italic font-serif">"</div>
+                <div className="text-4xl sm:text-6xl text-blue-400 absolute -bottom-8 right-0 italic font-serif">&rdquo;</div>
               </div>
               <div className="text-center mt-4 sm:mt-8">
                 <h2 className="text-xl sm:text-2xl font-bold text-white mb-1">{testimonials[currentSlide].name}</h2>
