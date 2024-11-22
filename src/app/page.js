@@ -99,7 +99,7 @@ export default function Home() {
 const HeroSection = () => (
 
   <Element name="hero">
-  <section className="relative flex flex-col md:flex-row items-center justify-center text-center bg-blue-500 text-white min-h-screen py-8 px-4">
+  <section className="relative flex flex-col md:flex-row items-center justify-center text-center bg-gradient-to-r from-blue-400 to-emerald-400 text-white min-h-screen py-8 px-4">
     {/* Social Links */}
     <div className="absolute left-0 top-1/2 transform -translate-y-1/2 space-y-4 ml-4 hidden md:flex flex-col">
       <a href="https://www.linkedin.com/in/bonnie-masota-310267248/" target="_blank" rel="noopener noreferrer">

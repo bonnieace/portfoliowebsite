@@ -32,7 +32,7 @@ const TestimonialCard = () => {
   ];
 
   return (
-    <div className="relative max-w-4xl mx-auto pt-16 px-4 sm:px-20">
+    <div className="relative max-w-4xl mx-auto pt-16 px-4 sm:px-20 ">
       {/* Stacked Shadow Cards */}
       <div className="relative">
         <div className="absolute inset-0 bg-blue-600 rounded-lg shadow-2xl transform translate-x-6 translate-y-6 opacity-50"></div>

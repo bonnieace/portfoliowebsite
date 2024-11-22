@@ -6,24 +6,6 @@ import 'slick-carousel/slick/slick-theme.css';
 // Sample data for projects
 const projects = [
   {
-    title: "POS System",
-    description: "This is a cloud-based point of sale system that is available on mobile, computers, tablets, and POS devices. (Offline mode available).",
-    images: [
-      "/iPhone1.png",
-      "/Iphone 15 Screens Mockup (1).png",
-    ],
-    type: "mobile-app"
-  },
-  {
-    title: "Invoicing System",
-    description: "This is a cloud-based invoicing system that is available on mobile, computers, tablets, and POS devices. (Offline mode available).",
-    images: [
-      "/Iphone 15 Screens Mockup.png",
-      "/iPhone 15 Mockup, Perspective.png",
-    ],
-    type: "mobile-app"
-  },
-  {
     title: "Jenga app",
     description: "This is a cloud-based construction system that allows owners and foremen to track expenses,manage human resource and checkin features.",
     images: [
@@ -33,12 +15,12 @@ const projects = [
     type: "mobile-app"
   },
   {
-    title: "Portugalgo",
-    description: "This is an owners portal app that allows home owners to list their homes on portugalgo for listing and manage reservations",
+    title: "ChickFarm",
+    description: "An AgriTech mobile application that allows chicken farmers to track mortality rates vaccines and expenses",
     images: [
-      "/portugal.png",
+      "/Mobile App Screen Mockup, Mosaic (2).png",
 
-      "/iPhone 15 Mockup, Perspective (2).png",
+      "/Mobile App Screen Mockup, Mosaic (2).png",
     ],
     type: "mobile-app"
   },
@@ -46,12 +28,32 @@ const projects = [
     title: "Portugalgo",
     description: "This is an owners portal app that allows home owners to list their homes on portugalgo for listing and manage reservations",
     images: [
-      "/portugal.png",
 
       "/iPhone 15 Mockup, Perspective (2).png",
+      "/portugal.png",
+
     ],
     type: "mobile-app"
   },
+  {
+    title: "POS System",
+    description: "This is a cloud-based point of sale system that is available on mobile, computers, tablets, and POS devices. (Offline mode available).",
+    images: [
+      "/iPhone1.png",
+      "/Iphone 15 Screens Mockup (1).png",
+    ],
+    type: "mobile-app"
+  },
+  {
+    title: "Ankara",
+    description: "This is a cloud-based invoicing system that is available on mobile, computers, tablets, and POS devices. (Offline mode available).",
+    images: [
+      "/Iphone 15 Screens Mockup.png",
+      "/iPhone 15 Mockup, Perspective.png",
+    ],
+    type: "mobile-app"
+  },
+  
   {
     title: " E-commerce",
     description: "An online store for various products with a user-friendly interface and secure payment options.",
@@ -123,7 +125,7 @@ const projects = [
   },
   {
     title: "Animation playlist",
-    description: "A youtube playlist with all my animated videos.They range from explainer videos,AI voice over videos and blender animations and short films.",
+    description: "A youtube playlist with all my animated videos.They range from explainer videos,AI voice over videos and blender animations.",
     images: [
       "/Macbook Mockup Front View UV (8).png",
       
@@ -174,7 +176,7 @@ const Project = ({ project }) => {
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-8 px-4 bg-gray-50">
+    <section id="projects" className="py-4 px-4 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl font-bold text-center mb-12 text-blue-500">Our Projects</h2>
         <div className="project-list grid grid-cols-1 md:grid-cols-3 gap-8 text-black  ">

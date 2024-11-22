@@ -27,9 +27,9 @@ const Teampage = () => {
 
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-12">
+    <div className="max-w-6xl mx-auto px-4 py-12 ">
       {/* Header Section */}
-      <div className="text-center mb-12">
+      <div className="text-center mb-12 ">
         <h1 className="text-3xl font-bold mb-4 text-blue-500">
           Team Behind Kioo<br />
            Technologies
