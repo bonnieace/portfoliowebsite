@@ -10,6 +10,7 @@ import { AiOutlineUser } from "react-icons/ai";
 import TeamPage from "./components/team";
 import Projects from "./components/projects";
 import TestimonialsSection from "./components/testimonials";
+import { Analytics } from "@vercel/analytics/next"
 // ─── SERVICES DATA ───────────────────────────────────────────────────────────
 const services = [
   { title: "Custom Software", description: "Scalable and robust custom software solutions tailored to your business needs.", icon: faLaptopCode },
@@ -760,6 +761,7 @@ const Footer = () => (
 export default function Home() {
   return (
     <div style={{ background: '#050814' }}>
+      <Analytics/>
       <HeroSection />
       
       <ServicesSection />
