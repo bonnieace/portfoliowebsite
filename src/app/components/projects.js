@@ -130,9 +130,8 @@ const ProjectCard = ({ project, index }) => {
         }
         .proj-image-wrap {
           position: relative;
-          aspect-ratio: 16/10;
           overflow: hidden;
-          background: #030712;
+          background: #ffffff;
         }
         .proj-image-wrap img {
           width: 100%;
@@ -229,7 +228,7 @@ const ProjectCard = ({ project, index }) => {
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
       >
-        <div className="proj-image-wrap">
+        <div className="proj-image-wrap" style={{ aspectRatio: project.type === 'mobile-app' ? '9/10' : '16/10' }}>
           <span className="proj-tag">{project.tag}</span>
           <span className="proj-num">/{String(index + 1).padStart(2, '0')}</span>
           {project.images.length > 1 ? (

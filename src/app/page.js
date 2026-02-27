@@ -421,7 +421,7 @@ const HeroSection = () => {
           writing-mode: vertical-rl;
         }
 
-        /* ─── SERVICES ───────────────────────────────────── */
+/* ─── SERVICES ───────────────────────────────────── */
         .section-header {
           text-align: center;
           margin-bottom: 4rem;
@@ -469,16 +469,20 @@ const HeroSection = () => {
           height: 1px;
           background: linear-gradient(90deg, transparent, rgba(59,130,246,0.3), transparent);
         }
+
+        /* ── Desktop: unified bordered panel with hairline dividers ── */
         .services-grid {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-          gap: 1.5px;
+          gap: 0;
           max-width: 1100px;
           margin: 0 auto;
-          border: 1.5px solid rgba(59,130,246,0.1);
+          border: 1px solid rgba(59,130,246,0.12);
           border-radius: 12px;
           overflow: hidden;
         }
+
+        /* inner dividers via box-shadow so border-radius stays clean */
         .service-card {
           background: rgba(10,15,35,0.8);
           padding: 2.5rem;
@@ -486,6 +490,10 @@ const HeroSection = () => {
           overflow: hidden;
           transition: background 0.3s;
           cursor: default;
+          /* hairline right + bottom borders acting as grid lines */
+          box-shadow:
+            1px 0 0 0 rgba(59,130,246,0.1),
+            0 1px 0 0 rgba(59,130,246,0.1);
         }
         .service-card::before {
           content: '';
@@ -497,6 +505,7 @@ const HeroSection = () => {
         }
         .service-card:hover { background: rgba(15,22,50,0.9); }
         .service-card:hover::before { opacity: 1; }
+
         .service-icon-wrap {
           width: 3rem;
           height: 3rem;
@@ -553,6 +562,47 @@ const HeroSection = () => {
         }
         .service-card:hover .service-line { width: 100%; }
 
+        /* ── Mobile: break into individual floating cards ── */
+        @media (max-width: 767px) {
+          .services-section {
+            padding: 5rem 1.25rem;
+          }
+
+          /* Reset the unified panel — each card becomes standalone */
+          .services-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            border: none;
+            border-radius: 0;
+            overflow: visible;
+            background: transparent;
+          }
+
+          .service-card {
+            border-radius: 12px;
+            border: 1px solid rgba(59,130,246,0.12);
+            /* remove the box-shadow grid-line trick */
+            box-shadow: none;
+            padding: 1.75rem 1.5rem;
+          }
+
+          .service-card:hover {
+            box-shadow: 0 8px 30px rgba(0,0,0,0.4), 0 0 20px rgba(59,130,246,0.08);
+          }
+
+          .service-num {
+            top: 1.25rem;
+            right: 1.25rem;
+          }
+        }
+
+        /* ── Tablet: 2-col grid, still with card gaps ── */
+        @media (min-width: 768px) and (max-width: 1023px) {
+          .services-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
         /* ─── FOOTER ───────────────────────────────────────── */
         .footer {
           background: rgba(3,5,15,0.98);
